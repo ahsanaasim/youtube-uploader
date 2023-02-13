@@ -8,16 +8,16 @@ class YTUploader:
         self.uploader.authenticate(oauth_path='oauth.json')
         shutil.copy('oauth.json', 'google-oauth.json')
 
-    def upload(self, path, tags = []):
+    def upload(self, path, title="", description="", categoryId="", privacyStatus="private", kids=False, tags = [], thumbnailLink=""):
         options = {
-            "title" : "Example title", # The video title
-            "description" : "Example description", # The video description
+            "title" : title, # The video title
+            "description" : description, # The video description
             "tags" : tags,
-            "categoryId" : "22",
-            "privacyStatus" : "public", # Video privacy. Can either be "public", "private", or "unlisted"
-            "kids" : False, # Specifies if the Video if for kids or not. Defaults to False.
-            # "thumbnailLink" : "https://cdn.havecamerawilltravel.com/photographer/files/2020/01/youtube-logo-new-1068x510.jpg" # Optional. Specifies video thumbnail.
+            "categoryId" : categoryId,
+            "privacyStatus" : privacyStatus, # Video privacy. Can either be "public", "private", or "unlisted"
+            "kids" : kids, # Specifies if the Video if for kids or not. Defaults to False.
+            "thumbnailLink" : thumbnailLink # Optional. Specifies video thumbnail.
         }
 
         # upload video
-        # self.uploader.upload(path, options) 
+        self.uploader.upload(path, options) 
