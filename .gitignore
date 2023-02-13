@@ -1,0 +1,9 @@
+*.mp3
+*.mp4
+images/*.png
+*.wav
+.DS_Store
+client_secrets.json
+google-oauth.json
+
+__pycache__
