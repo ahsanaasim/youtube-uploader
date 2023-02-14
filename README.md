@@ -24,6 +24,15 @@ licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
     
     uploader.createPlaylist('Python Playlist', 'Python description', 'private')
 
+### Important
+Need to modify the YOUTUBE_UPLOAD_SCOPE in __init__.py file inside the youtube-upload package with the following scopes
+
+    YOUTUBE_UPLOAD_SCOPE = [
+        "https://www.googleapis.com/auth/youtube",
+        "https://www.googleapis.com/auth/youtube.force-ssl",
+        "https://www.googleapis.com/auth/youtube.upload"
+    ]
+
 # License
 [The MIT License (MIT)](LICENSE)
 
