@@ -1,6 +1,7 @@
 from youtube_upload.client import YoutubeUploader
 import shutil
 import json
+import os.path
 
 import google.oauth2.credentials
 import googleapiclient.discovery
@@ -9,10 +10,13 @@ import googleapiclient.errors
 class YTUploader:
     def __init__(self):
         self.uploader = YoutubeUploader()
-        # self.uploader.authenticate()
-        shutil.copy('google-oauth.json', 'oauth.json')
-        self.uploader.authenticate(oauth_path='oauth.json')
-        shutil.copy('oauth.json', 'google-oauth.json')
+        if (os.path.exists('google-oauth.json') is False):
+            self.uploader.authenticate()
+            shutil.copy('oauth.json', 'google-oauth.json')
+        else:
+            shutil.copy('google-oauth.json', 'oauth.json')
+            self.uploader.authenticate(oauth_path='oauth.json')
+            shutil.copy('oauth.json', 'google-oauth.json')
 
     def makeCredentials(self):
         c = {}

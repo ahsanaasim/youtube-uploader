@@ -1,13 +1,10 @@
 from YTUploader import YTUploader
-
-uploader = YTUploader()
-# video = uploader.upload('ayah__CLIP.mp4', tags=["quran", "islam", "surah", "ayah"])
-
-# print('video', video)
-
 import os
 
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+
+uploader = YTUploader()
+# video = uploader.upload('ayah__CLIP.mp4', tags=["quran", "islam", "surah", "ayah"])
 
 def main():
     print("main function")
