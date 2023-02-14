@@ -17,6 +17,7 @@ class YTUploader:
             shutil.copy('google-oauth.json', 'oauth.json')
             self.uploader.authenticate(oauth_path='oauth.json')
             shutil.copy('oauth.json', 'google-oauth.json')
+        self.generateBuilder()
 
     def makeCredentials(self):
         c = {}

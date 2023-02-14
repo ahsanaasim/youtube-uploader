@@ -8,7 +8,6 @@ uploader = YTUploader()
 
 def main():
     print("main function")
-    # uploader.generateBuilder()
     # uploader.createPlaylist('Python Playlist', 'Python description', 'private')
     # uploader.addToPlaylist('PL23CtYg4XgaYMOTqjuq1oOktjUkDNUGZP', 'gZDArq_C4kc')
 

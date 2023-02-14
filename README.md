@@ -18,12 +18,10 @@ licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ### To add a video in a playlist
     
-    uploader.generateBuilder()
     uploader.addToPlaylist('PL23CtYg4XgaYMOTqjuq1oOktjUkDNUGZP', 'gZDArq_C4kc')
 
 ### To add a playlist
     
-    uploader.generateBuilder()
     uploader.createPlaylist('Python Playlist', 'Python description', 'private')
 
 # License
